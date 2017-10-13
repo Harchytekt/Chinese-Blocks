@@ -1,6 +1,5 @@
 # Chinese Blocks
 This is my first _"real"_ personnal program with Julia.  
-
 It uses the composite pattern to display the different building blocks of compound words in Mandarin.
 
 ## What's Julia? 👱🏻‍♀️
