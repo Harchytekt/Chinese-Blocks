@@ -4,7 +4,7 @@ This is my first _"real"_ personnal program with Julia.
 It uses the composite pattern to display the different building blocks of compound words in Mandarin.
 
 ## What's Julia? 👱🏻‍♀️
-[Julia](https://julialang.org) is a high-level, high-performance dynamic programming language for numerical computing.
+[Julia](https://julialang.org) is a high-level, high-performance dynamic programming language for numerical computing.  
 Its syntax is similar to that of Matlab, R, Scilab, Python, etc.  
 
 Julia is designed to address the needs of high-performance numerical analysis and computational science, without the typical need of separate compilation to be fast, while also being effective for general-purpose programming, web use or as a specification language.
