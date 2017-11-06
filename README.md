@@ -38,9 +38,3 @@ The result should be:
     	• Roi (Wáng, 王)
     	• Pays (Guó, 國)
 
-
-💡 Unfortunately some warnings are raised at launch…  
-There are of this form:  
-
-    WARNING: replacing docs for 'Component :: Union{}' in module 'Main'.
-
