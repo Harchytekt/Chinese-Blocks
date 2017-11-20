@@ -29,7 +29,7 @@ type Composition <: Component
 end
 
 """
-    printComposition(composition::Composition)
+    printcomposition(composition::Composition)
 
 Displays the name, chinese and symbol of the chosen composition.
 
@@ -38,22 +38,22 @@ Displays the name, chinese and symbol of the chosen composition.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> printComposition(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> printcomposition(volcan)
     • Huǒ
 	• Shān
 ```
 """
-function printComposition(composition::Composition)
+function printcomposition(composition::Composition)
     for item in composition.list
-        printComposition(item)
+        printcomposition(item)
     end
 end
 
 """
-    printSymbols(composition::Composition)
+    printsymbols(composition::Composition)
 
 Displays the symbols of the chosen composition.
 
@@ -62,22 +62,22 @@ Displays the symbols of the chosen composition.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> printSymbols(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> printsymbols(volcan)
     • 火
 	• 山
 ```
 """
-function printSymbols(composition::Composition)
+function printsymbols(composition::Composition)
     for item in composition.list
-        printSymbols(item)
+        printsymbols(item)
     end
 end
 
 """
-    printChinese(composition::Composition)
+    printchinese(composition::Composition)
 
 Displays the chineses words of the chosen composition.
 
@@ -86,22 +86,22 @@ Displays the chineses words of the chosen composition.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> printChinese(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> printchinese(volcan)
     • Huǒ
 	• Shān
 ```
 """
-function printChinese(composition::Composition)
+function printchinese(composition::Composition)
     for item in composition.list
-        printChinese(item)
+        printchinese(item)
     end
 end
 
 """
-    printSymbols(composition::Composition)
+    printsymbols(composition::Composition)
 
 Displays the symbols of the chosen composition on a single line.
 
@@ -110,10 +110,10 @@ Displays the symbols of the chosen composition on a single line.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> print(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> print(volcan)
 火山
 ```
 """
@@ -125,7 +125,7 @@ function print(composition::Composition)
 end
 
 """
-    printComposed(composition::Composition)
+    printcomposed(composition::Composition)
 
 Displays the complete composition.
 
@@ -134,30 +134,30 @@ Displays the complete composition.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> printComposed(Volcan)
-Volcan :
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> printcomposed(Volcan)
+Volcan v
 	• Feu (Huǒ, 火)
 	• Montagne (Shān, 山)
 ```
 """
-function printComposed(composition::Composition, choice="")
+function printcomposed(composition::Composition, choice="")
     println(composition.name * " :")
     if choice == "composition"
-        printComposition(composition)
+        printcomposition(composition)
     elseif choice == "symbols"
-        printSymbols(composition)
+        printsymbols(composition)
     elseif choice == "chinese"
-        printChinese(composition)
+        printchinese(composition)
     else
         print(composition)
     end
 end
 
 """
-    addComponent(composition::Composition, item::Component)
+    addcomponent(composition::Composition, item::Component)
 
 Adds an item to the composition.
 The item is a Component : it can be a Block or a Composition.
@@ -168,19 +168,19 @@ The item is a Component : it can be a Block or a Composition.
 
 # Examples
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> printComposed(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> printcomposed(volcan)
 Volcan :
 	• Feu (Huǒ, 火)
 ```
 """
-function addComponent(composition::Composition, item::Component)
+function addcomponent(composition::Composition, item::Component)
     push!(composition.list, item)
 end
 
 """
-    removeComponent(composition::Composition, item::Component)
+    removecomponent(composition::Composition, item::Component)
 
 Removes an item from the composition.
 The item is a Component : it can be a Block or a Composition.
@@ -193,32 +193,32 @@ The item is a Component : it can be a Block or a Composition.
 # Examples
 - This one will work :
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> removeComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> printComposed(Volcan)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> removecomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> printcomposed(volcan)
 Volcan :
 	• Montagne (Shān, 山)
 ```
 - This one won't :
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> Cratere = Composition("Cratère", [])
-julia> addComponent(Cratere, Volcan)
-julia> addComponent(Cratere, Block("Bouche", ("Kǒu", "口")))
-julia> removeComponent(Cratere, Block("Feu", ("Huǒ", "火")))
-ERROR: LoadError: MethodError: no method matching getIndex(::Block)
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> cratere = Composition("Cratère", [])
+julia> addcomponent(cratere, volcan)
+julia> addcomponent(cratere, Block("Bouche", ("Kǒu", "口")))
+julia> removecomponent(cratere, Block("Feu", ("Huǒ", "火")))
+ERROR: LoadError: MethodError: no method matching getindex(::Block)
 ```
 """
-function removeComponent(composition::Composition, item::Component)
-    splice!(composition.list, getIndex(item))
+function removecomponent(composition::Composition, item::Component)
+    splice!(composition.list, getindex(item))
 end
 
 """
-    getIndex(composition::Composition, item::Component)
+    getindex(composition::Composition, item::Component)
 
 Gets the index of the item.
 The item is a Component : it can be a Block or a Composition.
@@ -231,25 +231,25 @@ The item is a Component : it can be a Block or a Composition.
 # Examples
 - This one will work :
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> getIndex(Volcan, Block("Feu", ("Huǒ", "火")))
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> getindex(volcan, Block("Feu", ("Huǒ", "火")))
 1
 ```
 - This one won't :
 ```julia-repl
-julia> Volcan = Composition("Volcan", [])
-julia> addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-julia> addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-julia> Cratere = Composition("Cratère", [])
-julia> addComponent(Cratere, Volcan)
-julia> addComponent(Cratere, Block("Bouche", ("Kǒu", "口")))
-julia> getIndex(Cratere, Block("Feu", ("Huǒ", "火")))
+julia> volcan = Composition("Volcan", [])
+julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+julia> cratere = Composition("Cratère", [])
+julia> addcomponent(cratere, volcan)
+julia> addcomponent(cratere, Block("Bouche", ("Kǒu", "口")))
+julia> getindex(cratere, Block("Feu", ("Huǒ", "火")))
 nothing
 ```
 """
-function getIndex(composition::Composition, item::Component)
+function getindex(composition::Composition, item::Component)
     for i in range(1, length(composition.list))
         if composition.list[i].name == item.name
             return i

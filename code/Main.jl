@@ -21,41 +21,41 @@ include("Block.jl")
 
 function main()
     "Only prints the components in Chinese."
-    Volcan = Composition("Volcan", [])
-    addComponent(Volcan, Block("Feu", ("Huǒ", "火")))
-    addComponent(Volcan, Block("Montagne", ("Shān", "山")))
-    printComposed(Volcan, "chinese")
+    volcan = Composition("Volcan", [])
+    addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
+    addcomponent(volcan, Block("Montagne", ("Shān", "山")))
+    printcomposed(volcan, "chinese")
 
     "Only prints the components with symbols."
-    Cratere = Composition("Cratère", [])
-    addComponent(Cratere, Volcan)
-    addComponent(Cratere, Block("Bouche", ("Kǒu", "口")))
-    printComposed(Cratere, "symbols")
+    cratere = Composition("Cratère", [])
+    addcomponent(cratere, volcan)
+    addcomponent(cratere, Block("Bouche", ("Kǒu", "口")))
+    printcomposed(cratere, "symbols")
 
     "Prints the components French, Chinese and with symbols."
     Caldeira = Composition("Caldeira", [])
-    addComponent(Caldeira, Block("Cassé", ("Pò", "破")))
-    addComponent(Caldeira, Cratere)
-    printComposed(Caldeira, "composition")
+    addcomponent(Caldeira, Block("Cassé", ("Pò", "破")))
+    addcomponent(Caldeira, cratere)
+    printcomposed(Caldeira, "composition")
 
     "Only prints the word with symbols."
-    Belgique = Composition("Belgique", [])
-    addComponent(Belgique, Block("Rapport", ("Bǐ", "比")))
-    addComponent(Belgique, Block("Profit", ("Lì", "利")))
-    addComponent(Belgique, Block("Quand", ("Shí", "时")))
-    printComposed(Belgique)
+    belgique = Composition("Belgique", [])
+    addcomponent(belgique, Block("Rapport", ("Bǐ", "比")))
+    addcomponent(belgique, Block("Profit", ("Lì", "利")))
+    addcomponent(belgique, Block("Quand", ("Shí", "时")))
+    printcomposed(belgique)
 
     "Only prints the word with symbols."
-    Royaume = Composition("Royaume", [])
-    addComponent(Royaume, Block("Roi", ("Wáng", "王")))
-    addComponent(Royaume, Block("Pays", ("Guó", "國")))
-    printComposed(Royaume)
+    royaume = Composition("Royaume", [])
+    addcomponent(royaume, Block("Roi", ("Wáng", "王")))
+    addcomponent(royaume, Block("Pays", ("Guó", "國")))
+    printcomposed(royaume)
 
     "Prints the complete composition of the word."
-    RB = Composition("Royaume de Belgique", [])
-    addComponent(RB, Belgique)
-    addComponent(RB, Royaume)
-    printComposed(RB, "composition")
+    royaume_belgique = Composition("Royaume de Belgique", [])
+    addcomponent(royaume_belgique, belgique)
+    addcomponent(royaume_belgique, royaume)
+    printcomposed(royaume_belgique, "composition")
 end
 
 main()

@@ -31,7 +31,7 @@ type Block <: Component
 end
 
 """
-    printComposition(block::Block)
+    printcomposition(block::Block)
 
 Displays the name, chinese and symbol of the chosen block.
 
@@ -41,16 +41,16 @@ Displays the name, chinese and symbol of the chosen block.
 # Examples
 ```julia-repl
 julia> block = Block("Roi", ("Wáng", "王"))
-julia> printComposition(block)
+julia> printcomposition(block)
     • Roi (Wáng, 王)
 ```
 """
-function printComposition(block::Block)
+function printcomposition(block::Block)
     println("\t• " * block.name * " (" * block.tuple[1] * ", " * block.tuple[2] * ")")
 end
 
 """
-    printSymbols(block::Block)
+    printsymbols(block::Block)
 
 Displays the symbol of the chosen block.
 
@@ -60,16 +60,16 @@ Displays the symbol of the chosen block.
 # Examples
 ```julia-repl
 julia> block = Block("Roi", ("Wáng", "王"))
-julia> printSymbols(block)
+julia> printsymbols(block)
     • 王
 ```
 """
-function printSymbols(block::Block)
+function printsymbols(block::Block)
     println("\t• " * block.tuple[2])
 end
 
 """
-    printChinese(block::Block)
+    printchinese(block::Block)
 
 Displays the chinese of the chosen block.
 
@@ -79,11 +79,11 @@ Displays the chinese of the chosen block.
 # Examples
 ```julia-repl
 julia> block = Block("Roi", ("Wáng", "王"))
-julia> printChinese(block)
+julia> printchinese(block)
     • Wáng
 ```
 """
-function printChinese(block::Block)
+function printchinese(block::Block)
     println("\t• " * block.tuple[1])
 end
 
