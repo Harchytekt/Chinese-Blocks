@@ -23,7 +23,7 @@ import Base.getindex
     The Composition type, a subtype of Component, contains a list of Compositions and/or Blocks.
     This is the _Composite_ in the Composite Pattern.
 """
-type Composition <: Component
+mutable struct Composition <: Component
     name::String
     list::Array{Any,1}
 end
@@ -250,7 +250,7 @@ nothing
 ```
 """
 function getindex(composition::Composition, item::Component)
-    for i in range(1, length(composition.list))
+    for i in range(1, length=length(composition.list))
         if composition.list[i].name == item.name
             return i
         end

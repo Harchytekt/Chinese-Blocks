@@ -23,7 +23,7 @@ import Base.println
     The Block type, a subtype of Component, contains the symbol and its chinese translation.
     This is the _Leaf_ in the Composite Pattern.
 """
-type Block <: Component
+mutable struct Block <: Component
     name::String
     tuple::Tuple{String,String}
 end
