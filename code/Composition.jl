@@ -214,7 +214,7 @@ ERROR: LoadError: MethodError: no method matching getindex(::Block)
 ```
 """
 function removecomponent(composition::Composition, item::Component)
-    splice!(composition.list, getindex(item))
+    splice!(composition.list, getindex(composition, item))
 end
 
 """
