@@ -42,7 +42,7 @@ julia> volcan = Composition("Volcan", [])
 julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
 julia> printcomposition(volcan)
-    • Huǒ
+	• Huǒ
 	• Shān
 ```
 """
@@ -66,7 +66,7 @@ julia> volcan = Composition("Volcan", [])
 julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
 julia> printsymbols(volcan)
-    • 火
+	• 火
 	• 山
 ```
 """
@@ -90,7 +90,7 @@ julia> volcan = Composition("Volcan", [])
 julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
 julia> printchinese(volcan)
-    • Huǒ
+	• Huǒ
 	• Shān
 ```
 """
@@ -137,8 +137,8 @@ Displays the complete composition.
 julia> volcan = Composition("Volcan", [])
 julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
-julia> printcomposed(Volcan)
-Volcan v
+julia> printcomposed(volcan, "composition")
+Volcan :
 	• Feu (Huǒ, 火)
 	• Montagne (Shān, 山)
 ```
@@ -172,7 +172,7 @@ julia> volcan = Composition("Volcan", [])
 julia> addcomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> printcomposed(volcan)
 Volcan :
-	• Feu (Huǒ, 火)
+火
 ```
 """
 function addcomponent(composition::Composition, item::Component)
@@ -199,7 +199,7 @@ julia> addcomponent(volcan, Block("Montagne", ("Shān", "山")))
 julia> removecomponent(volcan, Block("Feu", ("Huǒ", "火")))
 julia> printcomposed(volcan)
 Volcan :
-	• Montagne (Shān, 山)
+山
 ```
 - This one won't :
 ```julia-repl
