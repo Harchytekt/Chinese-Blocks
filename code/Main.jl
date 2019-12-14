@@ -15,7 +15,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 include("Composition.jl")
-include("Block.jl")
 
 function main()
     "Only prints the components in Chinese."
