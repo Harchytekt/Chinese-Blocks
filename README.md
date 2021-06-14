@@ -2,7 +2,7 @@
 This project serves me to test new program languages as Julia and Swift.  
 The goal is to implement the composite pattern to display the different building blocks of compound words and phrases in Mandarin.
 
-## 
+## What are these Chinese blocks? 🀄️
 In the Chinese language, there are 180 to 215 radicals or *buildings blocks*.  
 They are used to build other characters or phrases.  
 An example would be 木 which means *tree*.
@@ -15,7 +15,7 @@ Two or more independent characters will build a phrase.
 In English, a phrase may translate as a single word or a group of words.  
 For example, 火山 (*fire* and *mountain* will be translated as *volcano*).
 
-## Result
+## Result 👨🏻‍💻
 The result might differ from one implementation to another.  
 Here's the output of the program in Groovy:
 
