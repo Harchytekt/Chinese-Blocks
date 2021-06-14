@@ -28,6 +28,6 @@ Here's the output of the program in Groovy:
 			• Mouth (Kǒu, 口)
 
 ## Languages 🗣️
-- [Groovy](groovy/README.md)
-- [Julia](julia/README.md)
-- [Swift](swift/README.md)
+- [Groovy](tree/master/Groovy/README.md)
+- [Julia](tree/master/Julia/README.md)
+- [Swift](tree/master/Swift/README.md)
