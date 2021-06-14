@@ -5,7 +5,7 @@ It displays the different building blocks of phrases in Mandarin.
 
 ## What's Swift? 🐦
 [Swift](https://swift.org) is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community.  
-Swift is an alternative to the Objective-C language that employs modern programming-language theory concepts and strives to present a simpler syntax. It uses a dot-notation style and namespace system more familiar to programmers from other common object-oriented languages like Java or C#.  
+This alternative to the Objective-C language employs modern programming-language theory concepts and strives to present a simpler syntax. It uses a dot-notation style and namespace system more familiar to programmers from other common object-oriented languages like Java or C#.  
 
 The platforms Swift supports are Apple's operating systems (Darwin, iOS, iPadOS, macOS, tvOS, watchOS), Linux, Windows, and Android.
 
