@@ -27,3 +27,7 @@ Here's the output of the program in Groovy:
 				• Mountain (Shān, 山)
 			• Mouth (Kǒu, 口)
 
+## Languages 🗣️
+- [Groovy](groovy/README.md)
+- [Julia](julia/README.md)
+- [Swift](swift/README.md)
