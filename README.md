@@ -1,40 +1,29 @@
 # Chinese Blocks 中文
-This is my first _"real"_ personnal program with Julia.  
-It uses the composite pattern to display the different building blocks of compound words in Mandarin.
+This project serves me to test new program languages as Julia and Swift.  
+The goal is to implement the composite pattern to display the different building blocks of compound words and phrases in Mandarin.
 
-## What's Julia? 👱🏻‍♀️
-[Julia](https://julialang.org) is a high-level, high-performance dynamic programming language for numerical computing.  
-Its syntax is similar to that of Matlab, R, Scilab, Python, etc.  
+## 
+In the Chinese language, there are 180 to 215 radicals or *buildings blocks*.  
+They are used to build other characters or phrases.  
+An example would be 木 which means *tree*.
 
-Julia is designed to address the needs of high-performance numerical analysis and computational science, without the typical need of separate compilation to be fast, while also being effective for general-purpose programming, web use or as a specification language.
+One building block (木 or 火, for *fire*) or an alternate compound form (灬 for *fire*) can be combined to make a *compound character*.  
+Compound characters can comprise two or more different building blocks (炎 for *burning hot*; 林 for *woods*).
 
-## Run it 🏃🏻
-Once the Julia language installed, open the CLI in the directory and type this:  
+Both *building block* and *compound' refer to a single-character word.  
+Two or more independent characters will build a phrase.  
+In English, a phrase may translate as a single word or a group of words.  
+For example, 火山 (*fire* and *mountain* will be translated as *volcano*).
 
-    julia Main.jl
+## Result
+The result might differ from one implementation to another.  
+Here's the output of the program in Groovy:
 
-The result should be:
-
-    Volcan :
-    	• Huǒ
-    	• Shān
-    Cratère :
-    	• 火
-    	• 山
-    	• 口
-    Caldeira :
-    	• Cassé (Pò, 破)
-    	• Feu (Huǒ, 火)
-    	• Montagne (Shān, 山)
-    	• Bouche (Kǒu, 口)
-    Belgique :
-    比利时
-    Royaume :
-    王國
-    Royaume de Belgique :
-    	• Rapport (Bǐ, 比)
-    	• Profit (Lì, 利)
-    	• Quand (Shí, 时)
-    	• Roi (Wáng, 王)
-    	• Pays (Guó, 國)
+	• Caldera (Pò huǒ shān kǒu, 破火山口)
+		• Broken (Pò, 破)
+		• Crater (Huǒ shān kǒu, 火山口)
+			• Volcano (Huǒ shān, 火山)
+				• Fire (Huǒ, 火)
+				• Mountain (Shān, 山)
+			• Mouth (Kǒu, 口)
 
