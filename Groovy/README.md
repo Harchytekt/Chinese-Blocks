@@ -2,7 +2,7 @@
 This is a first test of the composite pattern in Groovy.  
 It displays the different building blocks of phrases in Mandarin.
 
-## What's Java? ☕️
+## What's Groovy? ☕️
 [Apache Groovy](https://groovy-lang.org) is a Java-syntax-compatible object-oriented programming language for the Java platform.  
 It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk.
 
